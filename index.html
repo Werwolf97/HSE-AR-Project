@@ -1,5 +1,6 @@
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+<script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
 
 <style>
   .arjs-loader {
@@ -32,6 +33,7 @@
     renderer="logarithmicDepthBuffer: true;"
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+    gesture-detector
   >
     <!-- we use cors proxy to avoid cross-origin problems -->
     <a-nft
@@ -46,6 +48,7 @@
         gltf-model="https://werwolf97.github.io/HSE-AR-Project/1untitled.gltf"
         scale="100 100 100"
         position="150 150 50"
+        gesture-handler="minScale: 0.25; maxScale: 10"
       >
       </a-entity>
     </a-nft>
